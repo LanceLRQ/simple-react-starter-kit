@@ -1,0 +1,8 @@
+.idea/**
+.vscode/**
+webpack/**
+*.DS_Store
+.eslint.config.js
+.eslintrc.js
+webpack.config.local.babel.js
+webpack.config.production.babel.js

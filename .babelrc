@@ -1,0 +1,11 @@
+{
+  "presets": [
+  	["env"],
+    ["stage-0"],
+    ["react"]
+  ],
+  "plugins" : [
+    ["lodash", { "id": ["lodash", "recompose"] }],
+    ["transform-decorators-legacy"]
+  ]
+}

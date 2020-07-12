@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <base href="/" />
+    <meta charset="UTF-8">
+    <meta name="theme-color" content="#389e0d" />
+<!--    <meta name="msapplication-navbutton-color" content="#389e0d">-->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="bookmark" href="/favicon.ico" type="image/x-icon" />
+    <title><%= htmlWebpackPlugin.options.api_status %><%= htmlWebpackPlugin.options.title %></title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge,Chrome=1" />
+    <meta name="description" content="<%= htmlWebpackPlugin.options.descriptions %>" />
+    <meta name="keywords" content="<%= htmlWebpackPlugin.options.keywords %>" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+
+    <% for (var css in htmlWebpackPlugin.files.css) { %>
+    <link href="<%= htmlWebpackPlugin.options.static_host %><%=htmlWebpackPlugin.files.css[css] %>" rel="stylesheet">
+    <% } %>
+</head>
+<body>
+<div id="root"></div>
+<% for (var chunk in htmlWebpackPlugin.files.chunks) { %>
+<script type="text/javascript" src="<%= htmlWebpackPlugin.files.chunks[chunk].entry %>"></script>
+<% } %>
+</body>
+</html>
